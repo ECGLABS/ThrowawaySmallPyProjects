@@ -1,0 +1,24 @@
+import inspect
+import random
+
+def modify_script():
+    current_code = inspect.getsource(modify_script)
+    modified_code = current_code.replace('original', 'modified')
+    
+    with open(__file__, 'w') as file:
+        file.write(modified_code)
+
+def original():
+    print("if you're seeing this message you are lucky.")
+
+def modified():
+    print("Uh oh...")
+
+# Generate a random number between 0 and 1
+random_number = random.random()
+
+if random_number > 0.75:
+    modify_script()
+    modified()
+else:
+    original()
