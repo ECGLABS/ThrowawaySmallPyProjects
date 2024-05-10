@@ -1,0 +1,12 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+cService = webdriver.ChromeService(executable_path='home/johnx/Downloads/chromedriver')
+driver = webdriver.Chrome(service = cService)
+
+driver = webdriver.Chrome(chrome_driver_path)
+driver.implicitly_wait(60)
+driver.maximize_window()
+
+driver.get("https://www.google.com")
+
