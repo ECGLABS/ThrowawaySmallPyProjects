@@ -10,8 +10,7 @@ label.pack(pady=20)
 
 def roll_crypto():
     label.config(text="Rolling... (we'll add results soon)")
-    button = tk.Button(window, text="TIME TO GAMBA", command=roll_crypto)
-    button.pack()
+
 
 #Define Crypto List with a dictionary
 cryptos ={
@@ -28,7 +27,8 @@ def roll_crypto2():
     chosen = cryptos[roll]
     label.config(text=f"You Rolled for {roll}!\nCrypto: {chosen}")
 
-
+button = tk.Button(window, text="TIME TO GAMBA", command=roll_crypto)
+button.pack()
 
 
 window.mainloop()
