@@ -24,7 +24,7 @@ cryptos ={
     6:("Pulsechain" , "pulsechain"),
     }
 
-def roll_crypto2():
+def roll_crypto():
     roll = random.randint (1, 6)
     chosen = cryptos[roll]
     label.config(text=f"You Rolled for {roll}!\nCrypto: {chosen}")
